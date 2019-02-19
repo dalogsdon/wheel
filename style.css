@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+
+html {
+  font-size: 3vh;
+}
+
+body {
+  background-color: #272c35;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Patua One', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vh;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tag {
+  background-color: #4d555e;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: 0 50vh;
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 50%;
+  text-align: center;
+
+  transition: background-color 0.05s ease;
+}
+.tag.highlight {
+  background-color: #1497FF;
+}
+.tag.winner {
+  animation: 200ms infinite winner steps(2, end);
+  color: #00825F;
+}
+@keyframes winner {
+  from {
+    background-color: #FCEB6A;
+  }
+  to {
+    background-color: #32DBA3;
+  }
+}
+
+.stop-btn {
+  color: white;
+  cursor: pointer;
+  font-size: 3em;
+  font-weight: bold;
+  width: 12rem;
+  height: 12rem;
+  border: none;
+  background-color: #F53D4E;
+  border-radius: 50%;
+  outline: none;
+  font-family: 'Patua One', sans-serif;
+}
+.stop-btn:active {
+  background-color: #DB183F;
+}
+.stop-btn.disabled {
+  background-color: #4d555e;
+  font-size: 1.5em;
+}
+.stop-btn:not(.disabled):before {
+  content: "Stop!";
+}
+.stop-btn.disabled:before {
+  content: "Try Again";
+  font-weight: normal;
+}
+.stop-btn.disabled:active {
+  background-color: #bbb;
+}
