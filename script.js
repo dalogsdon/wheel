@@ -1,5 +1,18 @@
+// names as HTML since Matter can't render text
+// https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+// https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm
+function shuffle(a) {
+    let j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
 const d = document;
-const names = [
+const names = shuffle([
   'Asim',
   'Betty',
   'Bradley',
@@ -19,7 +32,7 @@ const names = [
   'Tyler',
   'Xiaojun',
   'Ytalo'
-];
+]);
 
 // voice
 window.speechSynthesis.getVoices();
