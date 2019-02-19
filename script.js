@@ -1,4 +1,3 @@
-// names as HTML since Matter can't render text
 // https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
 // https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm
 function shuffle(a) {
