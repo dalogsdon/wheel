@@ -3,8 +3,6 @@ import Utils from "/standup/Utils.js";
 const d = document;
 const { names, say } = Utils;
 
-// util
-const getRandom = arr => arr[Math.floor(Math.random() * arr.length)];
 const getNameFromElement = e => {
     return e.getAttribute('data-name');
 }

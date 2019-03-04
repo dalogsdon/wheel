@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+
+html {
+    font-size: 3vh;
+}
+
+body {
+    background-color: #272c35;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Patua One', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100vh;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+}
+
+.tag {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    position: absolute;
+    left: calc(50% - 2.25rem);
+    transform-origin: center calc(50vh - 1rem);
+    width: 4.5rem;
+    height: 4.5rem;
+    transition: background-color 0.05s ease;
+    user-select: none;
+}
+
+.tag.highlight {
+    background-color: #1497FF;
+}
+
+.tag.winner {
+    animation: 200ms infinite winner steps(2, end);
+    color: #00825F;
+}
+
+.tag .name {
+    flex-grow: 1;
+}
+
+@keyframes winner {
+    from {
+        background-color: #FCEB6A;
+    }
+
+    to {
+        background-color: #32DBA3;
+    }
+}
+
+.wheel {
+    background-color: #4d555e;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+}
